@@ -1,0 +1,20 @@
+en:
+  about:
+    title: "About"
+    url:   "/about/"
+  contact:
+    title: "Contact"
+    url:   "/contact/"
+  blog:
+    title: "Blog"
+    url:   "/blog/"
+sv:
+  about:
+    title: "Om"
+    url:   "/om/"
+  contact:
+    title: "Kontakta"
+    url:   "/kontakta/"
+  blog:
+    title: "Blogg"
+    url:   "/blogg/"
