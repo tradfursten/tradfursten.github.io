@@ -59,7 +59,7 @@ nav {
 	font-size: 30px;
 	font-weight: 200;
 	margin-bottom: 15px;
-	
+
 	a {
 		text-decoration: none;
 		color: white;
@@ -70,6 +70,19 @@ nav {
 	a:active {
 		color: #999;
 	}
+
+
+}
+.navlang {
+	display: flex;
+}
+
+.language {
+	display: flex;
+	flex-direction: column;
+	font-size: 15px;
+	margin-left: 10px;
+	justify-content: flex-end;
 }
 
 header {
@@ -108,10 +121,10 @@ header {
 
 ul {
 	list-style-type: none;
-	
+
 	&.recipe > li{
 		margin-top: 1em;
-	}
+}
 }
 
 .wrapper {
@@ -137,7 +150,7 @@ ul {
 
 	&>* {
 		margin: 10px 0 10px 0;
-	}
+}
 }
 
 
@@ -164,7 +177,7 @@ ul {
 
 	&:hover {
 		box-shadow: 0 0 3px rgba(255,255,255,.12),0 1px 4px rgba(255,255,255,.24);
-	}
+}
 }
 
 
@@ -198,13 +211,13 @@ ul {
 	body {
 		background: none;
 		background-color: black;
-	}
-	header {
-		width: 100%;
-	}
+}
+header {
+	width: 100%;
+}
 
-	section {
-		width: 100%;
-	}
+section {
+	width: 100%;
+}
 }
 

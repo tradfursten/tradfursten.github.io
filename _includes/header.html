@@ -1,16 +1,19 @@
 <header>
-<a href="/">
+<a href="{{ site.data.navigation[page.lang].home.url }}">
 	<div class="header">
 		<h1 class="title">BananPAJ AB</h1>
 		<img class="logo" src="/images/banan_pi.svg" alt="Pi gjort av bananer">
 	</div>
 </a>
 <nav>
-
-	{% for menu in site.data.navigation[page.lang] %}
-			<a href="{{ menu[1].url }}">{{ menu[1].title }}</a>
-	{% endfor %}
-	</nav>
-	{% assign posts=site.posts | where:"date", page.date | sort: 'path' %}{% for post in posts %}
+			<a href="{{ site.data.navigation[page.lang].about.url }}">{{ site.data.navigation[page.lang].about.title }}</a>
+			<a href="{{ site.data.navigation[page.lang].contact.url }}">{{ site.data.navigation[page.lang].contact.title }}</a>
+			<div class="navlang">
+				<a href="{{ site.data.navigation[page.lang].blog.url }}">{{ site.data.navigation[page.lang].blog.title }}</a>
+				<div class="language">
+					{% assign posts=site.posts | where:"date", page.date | sort: 'path' %}{% for post in posts %}
 	          <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>{% endfor %}
+				</div>
+			</div>
+	</nav>
 	</header>

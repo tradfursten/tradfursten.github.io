@@ -1,4 +1,6 @@
 en:
+  home:
+    url: "/"
   about:
     title: "About"
     url:   "/about/"
@@ -9,6 +11,8 @@ en:
     title: "Blog"
     url:   "/blog/"
 sv:
+  home:
+    url: "/hem/"
   about:
     title: "Om"
     url:   "/om/"
