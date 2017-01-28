@@ -10,11 +10,8 @@ github_username:  tradfursten
 # Build settings
 markdown: kramdown
 
-redcarpet:
-  extensions: ['smart', 'superscript']
-
-gems:
-  - jekyll-redirect-from
+# gems:
+#  - jekyll-redirect-from
 
 defaults:
   -
