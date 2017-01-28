@@ -8,7 +8,7 @@ twitter_username: tradfursten
 github_username:  tradfursten
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 
 redcarpet:
   extensions: ['smart', 'superscript']

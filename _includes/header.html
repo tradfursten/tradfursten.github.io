@@ -6,14 +6,23 @@
 	</div>
 </a>
 <nav>
-			<a href="{{ site.data.navigation[page.lang].about.url }}">{{ site.data.navigation[page.lang].about.title }}</a>
-			<a href="{{ site.data.navigation[page.lang].contact.url }}">{{ site.data.navigation[page.lang].contact.title }}</a>
+			<a href="{{ site.data.navigation[page.lang].about.url }}" 
+        {% if site.data.navigation[page.lang].about.url == page.url %}class="active"{% endif %}>{{ site.data.navigation[page.lang].about.title }}</a>
+			<a href="{{ site.data.navigation[page.lang].contact.url }}"
+        {% if site.data.navigation[page.lang].contact.url == page.url %}class="active"{% endif %}>{{ site.data.navigation[page.lang].contact.title }}</a>
 			<div class="navlang">
-				<a href="{{ site.data.navigation[page.lang].blog.url }}">{{ site.data.navigation[page.lang].blog.title }}</a>
+				<a href="{{ site.data.navigation[page.lang].blog.url }}"
+          {% if site.data.navigation[page.lang].blog.url == page.url %}class="active"{% endif %}>{{ site.data.navigation[page.lang].blog.title }}</a>
 				<div class="language">
-					{% assign posts=site.posts | where:"date", page.date | sort: 'path' %}{% for post in posts %}
-	          <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>{% endfor %}
-				</div>
-			</div>
-	</nav>
-	</header>
+					{% assign posts=site.posts | where:"date", page.date | sort: 'path' %}
+                                        {% for post in posts %}
+                                            {% if post.lang == page.lang %}
+                                                <a href="{{ post.url }}" class="active {{ post.lang }}">{{ post.lang }}</a>
+                                            {% else %}
+                                                <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+                                            {% endif %}
+                                        {% endfor %}
+                                </div>
+                        </div>
+</nav>
+</header>
