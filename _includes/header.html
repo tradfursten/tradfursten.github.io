@@ -14,15 +14,16 @@
 				<a href="{{ site.data.navigation[page.lang].blog.url }}"
           {% if site.data.navigation[page.lang].blog.url == page.url %}class="active"{% endif %}>{{ site.data.navigation[page.lang].blog.title }}</a>
 				<div class="language">
-					{% assign posts=site.posts | where:"date", page.date | sort: 'path' %}
-                                        {% for post in posts %}
-                                            {% if post.lang == page.lang %}
-                                                <a href="{{ post.url }}" class="active {{ post.lang }}">{{ post.lang }}</a>
-                                            {% else %}
-                                                <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
-                                            {% endif %}
-                                        {% endfor %}
-                                </div>
-                        </div>
+            {% for p in site.posts %}
+              {% if p.date == page.date %}
+                  {% if p.lang == page.lang %}
+                      <a href="{{ p.url }}" class="active {{ p.lang }}">{{ p.lang }}</a>
+                  {% else %}
+                      <a href="{{ p.url }}" class="{{ p.lang }}">{{ p.lang }}</a>
+                  {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
 </nav>
 </header>
