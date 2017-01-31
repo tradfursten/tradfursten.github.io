@@ -2,6 +2,7 @@
 layout: post
 title: Sluta aldrig
 lang: sv
+type: posts
 ---
 
 # Sluta aldrig lära dig nya saker
