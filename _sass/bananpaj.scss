@@ -46,7 +46,11 @@ p {
 
 a {
   text-decoration: none;
-  color: $color-primary-2;
+  color: $color-primary-0;
+
+  &:hover {
+    color: $color-primary-2;
+  }
 }
 
 nav {
@@ -68,7 +72,7 @@ nav {
     color: $color-primary-2;
   }
   a:active {
-    color: $color-primary-2;
+    color: $color-primary-0;
   }
 
 
@@ -89,7 +93,11 @@ nav {
   justify-content: flex-end;
 
   .active {
-    color: $color-primary-2;
+    color: $color-primary-0;
+
+    &:hover {
+      color: $color-primary-2;
+    }
   }
 }
 
