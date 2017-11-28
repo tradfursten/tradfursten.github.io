@@ -10,6 +10,8 @@ github_username:  tradfursten
 # Build settings
 markdown: kramdown
 
+github: [metadata]
+
 # gems:
 #  - jekyll-redirect-from
 
